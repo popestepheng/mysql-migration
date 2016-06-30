@@ -1,6 +1,6 @@
 # mysql-migrate
 
-This image runs mysqldump to backup data from a source mysql server or fetches the latest backup from AWS S3 backup done by mysql-aws-backup image
+This image runs mysqldump to backup data from a source mysql server and imports it into a destination mysql server
 
 ## Usage:
 
