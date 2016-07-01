@@ -2,17 +2,17 @@
 if [ -z "$MYSQL_SRC_HOST" ];
 then
     echo "Please set MYSQL_SRC_HOST variable";
-    exit 0;
+    exit 1;
 fi
 if [ -z "$MYSQL_SRC_USER" ];
 then
     echo "Please set MYSQL_SRC_USER variable";
-    exit 0;
+    exit 1;
 fi
 if [ -z "$MYSQL_SRC_DB" ];
 then
     echo "Please set MYSQL_SRC_DB variable";
-    exit 0;
+    exit 1;
 fi
 
 MYSQL_DUMP_CMD="mysqldump --add-drop-table --host=$MYSQL_SRC_HOST ";

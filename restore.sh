@@ -2,29 +2,9 @@
 
 if [ ! -f ./backup/dump.sql ]; then
     echo "ERROR: No backup done!"
-    exit 0;
+    exit 1;
 fi
 
-if [ -z "$MYSQL_DEST_HOST" ];
-then
-    echo "Please set MYSQL_DEST_HOST variable";
-    exit 0;
-fi
-if [ -z "$MYSQL_DEST_PORT" ];
-then
-    echo "Please set MYSQL_DEST_PORT variable";
-    exit 0;
-fi
-if [ -z "$MYSQL_DEST_USER" ];
-then
-    echo "Please set MYSQL_DEST_USER variable";
-    exit 0;
-fi
-if [ -z "$MYSQL_DEST_DB" ];
-then
-    echo "Please set MYSQL_DEST_DB variable";
-    exit 0;
-fi
 
 MYSQL_IMPORT_CMD="mysql --host=$MYSQL_DEST_HOST "
 

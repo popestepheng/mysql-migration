@@ -1,7 +1,6 @@
 #!/bin/bash
 
-./fetch_from_target.sh
-
-./restore.sh
-
+./check_variables.sh &&
+./fetch_from_target.sh &&
+./restore.sh &&
 echo "All done";
