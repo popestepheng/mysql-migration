@@ -8,6 +8,7 @@ RUN apt-get update && \
 ADD run.sh /run.sh
 ADD check_variables.sh /check_variables.sh
 ADD fetch_from_target.sh /fetch_from_target.sh
+ADD cleanup.sh /cleanup.sh
 ADD restore.sh /restore.sh
 
 RUN chmod +x *.sh

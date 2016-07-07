@@ -5,6 +5,11 @@ if [ ! -f ./backup/dump.sql ]; then
     exit 1;
 fi
 
+if [ -z "$MYSQL_SRC_TABLES" ];
+then
+    ./cleanup.sh
+fi
+
 
 MYSQL_IMPORT_CMD="mysql --host=$MYSQL_DEST_HOST "
 
