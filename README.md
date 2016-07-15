@@ -1,9 +1,10 @@
-# mysql-migrate
+# mysql-migration
 
-This image runs mysqldump to backup data from a source mysql server or fetches the latest backup from AWS S3 backup done by mysql-aws-backup image
+This image runs mysqldump to backup data from a source mysql server and imports it into a destination mysql server
 
 ## Usage:
 
+    docker build -t mysql-migration .
     docker run -d \
         --env MYSQL_SRC_HOST="172.17.0.2" \
         --env MYSQL_SRC_PORT=3306 \
@@ -16,7 +17,7 @@ This image runs mysqldump to backup data from a source mysql server or fetches t
         --env MYSQL_DEST_PASSWORD="root" \
         --env MYSQL_DEST_DB="my-db-stage" \
         --env MYSQL_SRC_TABLES="entry invoice"
-        mysql-migrate
+        mysql-migration
 
 ## Parameters
 
